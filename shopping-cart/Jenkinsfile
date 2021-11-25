@@ -70,8 +70,10 @@ sh "! ../tools/check-job-state.sh security-scans-trivy ${APP_NAMESPACE}"
 
         sh """
 
-        oc patch deployment security-scans \-p '{"spec": {"template": {"metadata": {"labels":
-{"build": "build-${BUILD_NUMBER}"}}}}}' \-n ${APP_NAMESPACE}
+        oc patch deployment security-scans \
+-p '{"spec": {"template": {"metadata": {"labels":
+{"build": "build-${BUILD_NUMBER}"}}}}}' \
+-n ${APP_NAMESPACE}
 
         """
 
