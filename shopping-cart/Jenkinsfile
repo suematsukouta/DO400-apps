@@ -54,8 +54,7 @@ oc process -f kubefiles/security-scan-template.yml \
 
 """
 
-sh "! ../tools/check-job-state.sh security-scans-trivy
-${APP_NAMESPACE}"
+sh "! ../tools/check-job-state.sh security-scans-trivy${APP_NAMESPACE}"
 
 }
 
