@@ -50,7 +50,7 @@ oc process -f kubefiles/security-scan-template.yml \
 -n ${APP_NAMESPACE} \
 -p PROJECT_NAME=${APP_NAMESPACE} \
 -p CVE_CODE=CVE-2020-14583 \
-| oc replace ---------------------------------force -n ${APP_NAMESPACE} -f -
+| oc replace --force -n ${APP_NAMESPACE} -f -
 
 """
 
